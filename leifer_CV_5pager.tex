@@ -1,0 +1,358 @@
+% Andrew Leifer's CV
+% Based on Joshua Shaevitz's Latex CV template of unknown origin
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%
+\documentclass[10pt]{article}
+\usepackage[paper=letterpaper,margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+%% This gives us fun enumeration environments. compactitem will be nice.
+\usepackage{paralist}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+
+% Simpler bibsection for CV sections
+% (thanks to natbib for inspiration)
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{2em}
+\newlength{\bibsep}
+\newcounter{Lcount}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newenvironment{bibsection}%
+        {\begin{list}{\arabic{Lcount}.}{%
+       \usecounter{Lcount}%
+       \setlength\labelwidth{-0.5em}%
+       \setlength{\leftmargin}{\bibhang}%
+       \setlength{\itemindent}{-\leftmargin}%
+       \setlength{\itemsep}{\bibsep}%
+       \setlength{\parsep}{\z@}%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.9\baselineskip}}
+\makeatother
+
+\usepackage{lastpage} 
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+%\lfoot{\hspace{\footpageshift}%
+%       \parbox{4in}{\, \hfill %
+%                    \arabic{page} of \protect\pageref{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+%                    \hfill \,}}
+\lhead{Andrew~M.~Leifer}
+\rhead{Curriculum Vitae}
+\fancyfoot[CO,CE]{ \arabic{page} of \protect\pageref{LastPage}}
+\renewcommand{\headrulewidth}{.1pt}
+
+
+%%%%%%%%%%%%%%%%
+%Lists and Section headings
+%%%%%%%%%%%%%%%
+\newenvironment{list1}{
+%\vspace{-\baselineskip}
+  \begin{list}{}{
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.2in}\setlength{\rightmargin}{0.2in}}}{\end{list}\vspace{\baselineskip}}
+
+\newenvironment{listinline}{
+	%\vspace{-\baselineskip}
+	  \begin{list}{}{
+	      \setlength{\itemsep}{0in}
+	      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+	      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+	      \setlength{\leftmargin}{0.2in}\setlength{\rightmargin}{0.2in}}}{\end{list}}
+
+
+\makeatletter
+\renewcommand{\section}{\@startsection
+{section}%                   % the name
+{1}%                         % the level
+{0mm}%                       % the indent
+{2\baselineskip}%            % the before skip
+{0.5\baselineskip}%          % the after skip
+{\normalfont\bf\MakeUppercase}} % the style
+\makeatother
+\setcounter{secnumdepth}{-1} 
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+\vspace{-\baselineskip}
+{\large {\bf CURRICULUM VITAE
+\vskip 0.1in
+Andrew M.~Leifer}
+
+Associate Professor of Physics and Neuroscience}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Contact Information}
+
+Joseph Henry Laboratories  \hfill Phone: (609) 258-8779 \\
+Princeton University \hfill leifer@princeton.edu\\
+Princeton, NJ 08544 \hfill \url{http://leiferlab.princeton.edu}\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-\baselineskip}
+\section{Professional Experience}
+
+{\bf Princeton University}, Princeton, NJ  \dotfill 2024--present\\
+{\it Associate Professor}, Department of Physics and Princeton
+Neuroscience Institute \\
+%{\it Faculty}, Center for Physics of Biological Function\\ %sine 2016
+{\it Associated Faculty},  Omenn-Darling Bioengineering Institute (2021-present) \\ %since 2021
+{\it Associated Faculty}, Lewis-Sigler Institute for Integrative Genomics  (2016-present) \\ % since 2016
+\\
+{\bf Princeton University}, Princeton, NJ  \dotfill 2016--2024\\
+{\it Assistant Professor}, Department of Physics and Princeton
+Neuroscience Institute \\
+\\
+{\bf Princeton University}, Princeton, NJ  \dotfill 2012--2016\\
+{\it Lewis-Sigler Fellow}, Lewis-Sigler Institute for Integrative Genomics\\ 
+\\
+{\bf JILA (NIST-University of Colorado)}, Boulder, CO   \dotfill Summers 2005-2006\\
+{\it NSF Summer Undergraduate Research Fellow}.\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Research Interests}
+%\noindent My research focuses on precision measurements in biology using tractable model systems. At all levels, biological organisms exhibit collective phenomena, where large-scale behaviors arise from the action of local players. Members of my lab study the emergence of cellular- and population-level order in prokaryotes by probing the coordinated action of thousands of individual proteins inside a cell and by measuring the dynamics of hundreds of cells simultaneously within a population. Another aspect of our work takes a data-driven approach to studying animal behavior in order to discover deep connections between genetics, neurocircuitry and behavior.
+%\noindent My research focuses on developing new, precision imaging and image analysis techniques to study the emergence of large-scale movements from the collective action of individual molecules. By combining new methods for physically probing cells and unique experimental pipelines, I have developed a deep understanding of how cells grow into the correct size and shape, and how cells glide to form large-scale population structure.  %More recently, I have embarked on a major effort to quantify animal movements using statistical techniques. 
+%Another aspect of my work takes a data-driven approach to studying animal behavior in order to discover deep connections between genetics, neurocircuitry and behavior.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{-\baselineskip}
+\section{Education}
+{\bf Ph.D. in Biophysics}, Harvard University, Cambridge, MA \dotfill May 2012
+
+\begin{list1}
+\item Thesis Topic: ``Optogenetics and computer vision for \textit{C. elegans} neuroscience and other biophysical applications'' Advisor:  Professor Aravinthan D.T.~Samuel
+\end{list1}
+
+{\bf B.S. in Physics},  Stanford University, Stanford, CA \dotfill June 2007\\
+{\bf B.A. in Political Science}, Stanford University, Stanford, CA \dotfill June 2007
+\begin{list1}
+\item Interdisciplinary Honors in International Security Studies
+ %Thesis Topic: ``International scientific engagement for mitigating emerging nuclear security threats'' Advisor: Professor Michael May
+\end{list1} 
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Honors and Awards} 
+National Institutes of Health Director's New Innovator Award \dotfill 2019\\
+National Science Foundation CAREER Award \dotfill 2019\\
+Emerging Leaders in Biosecurity Initiative Fellow, Johns Hopkins,  Center for Health Security \dotfill 2015\\
+Simons Investigator, Simons Collaboration on the Global Brain, Simons Foundation \dotfill 2014\\
+American Physical Society, Biological Physics Thesis Award: Certificate of Merit \dotfill 2013\\
+Lewis-Sigler Fellowship, Princeton University \dotfill 2012--2016\\
+Derek C.~Bok Certificate of Distinction in Teaching, Harvard University.\dotfill 2008\\
+National Science Foundation Graduate Research Fellowship\dotfill 2007--2011\\
+Leonard Rieser Fellowship in Science Tech \& Global Security, Bulletin of the Atomic Scientist\dotfill 2006\\
+SPIE International Society for Optical Engineering Scholarship\dotfill 2006\\
+American Institute of Physics, Society of Physics Students, Leadership Award\dotfill 2006\\
+National Science Foundation, Summer Undergraduate Research Fellowship\dotfill 2005--2006\\
+AAAS, Center for Science Technology and Security Policy, Intern of the Year Award.\dotfill 2006\\
+Harry Press Journalism Award, Stanford University.\dotfill 2006\\
+Boothe Prize for Excellence in Writing, Stanford University\dotfill 2004\\
+Robert C. Byrd Academic Merit Scholarship\dotfill 2003\\
+Dofflemyer Eagle Scout Scholarship\dotfill 2003\\
+Awards for the author's independent research, ``Fractals, Power-Laws and the Weibull Distribution: Mathematically Modeling Crumpled Paper''\dotfill 2003\\
+\vspace{-\baselineskip}
+\begin{listinline}
+\item American Mathematical Society, Karl Menger Award.
+\item Office of Naval Research, Naval Science Award.
+\item Third Place Team Project, Intel International Science and Engineering Fair 2003.
+\end{listinline}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{University Service (Past and Present)} 
+Chair of Equity, Diversity, and Inclusion Advisory Board of the Department of Physics; Chair of Neuroscience Graduate Admissions Committee; Chair of Biophysics Graduate Admissions Committee; Member of Biological Agent Safety Committee; Member of Institutional Biosafety Committee; Undergrad Advisor in Mathey College; Member of Council of the Princeton University Community; Resident Tutor of  Lowell House, Harvard College.
+
+\section{Professional Service (Past 3 Years)}
+%Judge, Delaware Neuroscience Symposium\dotfill 2014\\
+Member-at-Large, Division of Biological Physics, American Physical Society\dotfill    2025-present\\
+Co-organizer, \textit{CeNeuro} conference, to be held in France 2026\dotfill 2024-present\\
+Co-organizer Physics of Neural Systems sessions, 2025 APS Meeting \dotfill 2024-2025\\
+Program Committee member, CoSyNe\dotfill 2019-2022
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Teaching (Past 3 Years)}
+NEU 457 Measurement and Analysis of Neural Dynamics\\
+PHY 108 Physics for Life Scientists\\
+PHY 101 Introductory Physics I
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Invited Lectures  (Past 3 Years)}
+Kavli Institute for Theoretical Physics, Neurophysics of Active Sensing \dotfill 2025\\
+HHMI Janelia, Analysis and Modeling of Connectomes \dotfill 2025\\
+École Polytechnique Fédérale de Lausanne \dotfill 2025\\
+Université Claude Bernard Lyon 1, Mechanisms in Integrated Life Sciences \dotfill 2025\\
+Simons Foundation SCGB Annual Meeting \dotfill 2025\\
+Salk Institute \dotfill 2025\\
+Scripps Research, Neuroscience Seminar \dotfill 2025\\
+Harvard University, Program in Biophysics \dotfill 2025\\
+Yale University, Inspiring Speaker Seminar, Wu Tsai Institute\dotfill 2025\\
+Automated Neural Identification, Tracking, and Behavioral Conference, UMass Worcester \dotfill 2024\\
+Columbia University, Kavli Seminar, Center for Theoretical Neuroscience \dotfill 2024\\
+Duke University, Department of Neurobiology \dotfill 2024\\
+%Princeton University, Machine Learning in Physics Symposium \dotfill 2024\\
+Harvard University, Department of Physics Colloquium \dotfill 2024\\
+Albert Einstein School of Medicine, Department of Neuroscience \dotfill  2023\\
+University of Washington, Department of Physiology and Biophysics \dotfill 2023\\
+Allen Institute for Neural Dynamics \dotfill 2023\\
+Memorial Sloan Kettering Cancer Center, Developmental Biology Seminar  \dotfill 2023\\
+APS March Meeting (delivered by Sophie Dvali) \dotfill 2023\\
+University of Chicago, Neuroscience Seminar  \dotfill 2023\\
+New York Area Worm Meeting, Plenary speaker \dotfill 2023\\
+Yale University, Quantitative  Biology Seminar \dotfill 2022\\
+Google Research  \dotfill 2022\\
+Syracuse University, Department of Physics \dotfill 2022\\
+UCSF \dotfill 2022\\
+CalTech, Neuroscience Seminar \dotfill 2022\\
+Stanford University, Wu Tsai Neurosciences Institute \dotfill 2022\\
+Johns Hopkins University, Biology Seminar \dotfill 2022\\
+Kavli Institute for Theoretical Physics, Neurophysics of Locomotion Workshop  \dotfill 2022\\
+Neuro 2022, Japan Neuroscience Society, Okinawa, Japan \dotfill 2022\\
+CoSyNe Workshop, Lisbon, Portugal\dotfill 2022\\ 
+Simons Foundation, Simons Collaboration on the Global Brain Annual Meeting \dotfill 2022\\
+NSF Workshop: Functional Logic of Neural Circuits, San Juan, PR \dotfill 2022\\
+
+
+
+
+\section{Manuscripts undergoing peer review}
+\begin{bibsection}
+
+\item  Gauthey, W., Lin, A.,  Ahmed, O.~M.,   Leifer, A.~M.,  Murthy, M.,  Thiberge, S.~Y.,  ``High-speed whole-brain imaging in Drosophila'' bioRxiv 2025.06.18.660371 18 June (2025).
+			
+\item Li, J,   Leifer, A.~M,  Wolpert, D.~H.,  ``Measuring amount of computation done by C. elegans using whole brain neural activity'' arXiv, arxiv:2504.10300; 14 April (2025).
+ 
+\item Creamer, M.~S.,   Leifer, A.~M., Pillow, J.~W., ``Bridging the gap between the connectome and whole-brain activity in C. elegans,'' bioRxiv, 2024.09.22.614271(2024).
+\end{bibsection}
+
+\section{Peer-reviewed Publications}
+\begin{bibsection}
+\item Dvali, S., Seguin, C., Betzel, R., Leifer, A.~M., ``Diverging network architecture of the C. elegans connectome and signaling network'' \textit{PRX Life},  3, 033021, 10 September (2025).
+
+\item Haque, R., Setty, H., Lorenzo, R., Stelzer, G., Rotkopf, R., Salzberg, Y., Goldman, G., Kumar, S., Halber, S.~N., Leifer, A.~M., Schneidman, E., Laurent, P., Oren-Suissa, M., ``Decoding sexual dimorphism of the sex-shared nervous system at single-neuron resolution.'' \textit{Science Advances} 11, eadv9106, 11 July (2025).
+
+\item Chen, K.~S., Sharma, A.~K., Pillow, J.~W., Leifer, A.~M., ``Navigation strategies in Caenorhabditis elegans are differentially altered by learning,'' \textit{PLOS Biology}, 23(3): e3003005, (2025).
+
+\item Huo, J., Xu, T., Liu, Q., Polat, M., Kumar, S., Zhang, X., Leifer, A.~M., Wen, Q., ``Hierarchical behavior control by a single class of interneurons,'' \textit{PNAS}, 121 (47) e2410789121, 12 November (2024).
+
+\item Kumar, S., Sharma, A.~K., Leifer, A.~M., ``An inhibitory acetylcholine receptor gates context dependent mechanosensory processing in C. elegans,'' \textit{iScience}, Volume 27, Issue 10, 18 October (2024).
+
+\item Sharma, A.~K., Randi, F., Kumar, S., Dvali, S., Leifer, A.~M., ``TWISP: A Transgenic Worm for Interrogating Signal Propagation in C. elegans.'' \textit{Genetics}, Vol 227, Issue 3, July (2024).
+
+\item Gauthey, W., Randi, F.*, Sharma, A.~K.*, Kumar, S., Leifer, A.~M., ``Light evokes stereotyped global brain dynamics in C. elegans.'' \textit{Current Biology}, Vol 34, Issue 1, Pages R14-R15, 8 January (2024).
+
+\item Randi, F., Sharma, A.~K., Dvali, S., Leifer, A.~M., ``Neural signal propagation atlas of C. elegans.'' \textit{Nature}, 623, 406–414 (2023).
+
+\item Kumar, S., Sharma, A.~K., Tran, A., Liu, M., Leifer, A.~M., ``Inhibitory motor signals gate mechanosensory processing in C. elegans'' \textit{PLOS Biology}, (9): e3002280 (2023).
+
+\item Chen, K.~S.*, Wu, R.*, Gershow, M.~H., Leifer, A.~M., ``Continuous odor profile monitoring to study olfactory navigation in small animals.'' \textit{eLife}, 12:e85910, 25 July (2023).
+
+\item Creamer, M.~S., Chen, K.~S., Leifer, A.~M., Pillow, J.~W., ``Correcting motion induced fluorescence artifacts in two-channel neural imaging.'' \textit{PLOS Computational Biology}, 18(9): e1010421, Sept 28 (2022)
+
+\item Princeton Open Ventilation Monitor Collaboration, Bourrianne, P., Chidzik, S., Cohen, D.~J., Elmer, P., Hallowell, T., Kilbaugh, T.~J., Lange, D., Leifer, A.~M., Marlow, D.~R., Meyers, P.~D., Normand, E., Nunes, J., Oh, M., Page, L., Pereira, T., Pivarski, J., Schreiner, H., Stone, H.~A., Tank, D.~W., Thiberge, S., Tully, C., ``Inexpensive multi-patient respiratory monitoring system for helmet ventilation during COVID-19 pandemic.'' \textit{ASME Journal of Medical Devices}, Mar 16(1): 011003 (2022).
+
+\item Liu, M., Kumar, S., Sharma, A.~K., Leifer, A.~M., ``A high-throughput method to deliver targeted optogenetic stimulation to moving C. elegans populations.'' \textit{PLOS Biology}, 20(1): e3001524 (2022)
+
+\item Urai, A.~E., Doiron, B., Leifer, A.~M., Churchland, A.~K., ``Large-scale neural recordings call for new insights to link brain and behavior.'' \textit{Nature Neuroscience}, 3 January (2022). [Invited Review]
+
+\item Hallinen, K.~M.*, Dempsey, R.*, Scholz, M.*, Yu, X., Linder, A.~N., Randi, F., Sharma, A.~K., Shaevitz, J.~W., Leifer, A.~M., ``Decoding locomotion from population neural activity in moving C. elegans.'' \emph{eLife}, 10:e66135, 29 July (2021).
+
+\item Yu, X., Creamer, M.~S., Randi, F., Sharma, A.~K., Linderman, S.~W., Leifer, A.~M., ``Fast deep neural correspondence for tracking and identifying neurons in C. elegans using semi-synthetic training.'' \emph{eLife}, 10:e66410, 14 July (2021).
+
+\item Randi, F., Leifer, A.~M., ``Nonequilibrium Green's functions for functional connectivity in the brain.'' \emph{Phys Rev Lett}, \textbf{126}, 118102 (2021).
+
+\item Randi, F., Leifer, A.~M., ``Measuring and modeling whole-brain neural dynamics in Caenorhabditis elegans.'' \emph{Current Opinion in Neurobiology}, Vol 65, Pages 157-167 (2020). [Invited Review]
+
+\item Datta, R., Anderson, D., Branson, K., Perona, P., Leifer, A.~M., ``Computational neuroethology: a call to action.'' \emph{Neuron}, 104:1, (2019). [Review]
+
+\item Chen, X., Randi, F., Leifer, A.~M., Bialek, W., ``Searching for collective behavior in a small brain.'' \emph{Phys Rev E}, \textbf{99}, 052418 (2019).
+
+\item Liu, M., Sharma, A.~K., Shaevitz, J.~W., Leifer, A.~M., ``Temporal processing and context dependency in \textit{C. elegans} mechanosensation.'' \emph{eLife}, 7:e36419 (2018).   
+
+\item Nguyen, J., Linder, A.~N., Plummer, G., Shaevitz, J.~W., Leifer, A.~M., ``Automatically tracking neurons in a moving and deforming brain'' \emph{PLOS Computational Biology}, 13(5): e1005517 (2017).
+
+\item Nguyen, J., Shipley, F.~B., Linder, A.~N., Plummer, G., Liu, M., Setru, S.~U., Shaevitz, J.~W., Leifer, A.~M., ``Whole-brain calcium imaging with cellular resolution in freely behaving \textit{Caenorhabditis elegans}.'' \emph{PNAS}, vol.~113 no.~8, E1074-E1081 (2016).
+
+\item Shipley, F.~B., Clark, C.~M., Alkema, M.~J., Leifer, A.~M., ``Simultaneous optogenetic stimulation and calcium imaging in freely moving \textit{C. elegans}.'' \emph{Frontiers in Neural Circuits}, 8:28 (2014).
+
+\item Husson, S.~J., Gottschalk, A., Leifer, A.~M., ``Optogenetic manipulation of neural activity in C. elegans: from synapse to circuits and behavior'' \emph{Journal of Biology of the Cell}, 105, 1--16 (2013). [Invited Review]
+
+\item Donnelly, J.~L., Clark, C.~M., Leifer, A.~M., Haburacak, M., Pirri, J.~K., Francis, M.~M., Samuel, A.~D.~T., Alkema, M.~J., ``Monoaminergic orchestration of motor programs in a complex behavior in C. elegans.'' \emph{PLOS Biology}, 11(4): e1001529 (2013).	
+
+\item Wen, Q., Po, M., Hulme, E., Chen, S., Liu, X., Kwok, S.~W., Gershow, M., Leifer, A.~M., Butler, V., Fang-Yen, C., Kawano, T., Schafer, W.~R., Whitesides, G., Wyart, M., Chklovskii, D., Zhen, M., Samuel, A.~D.~T., ``Proprioceptive coupling within motor neurons drives \emph{C. elegans} forward locomotion.'' \emph{Neuron}, 76, 750--761 (2012).
+
+\item Lin, C., Jungmann, R., Leifer, A.~M., Li, C., Levner, D., Church, G.~M., Shih, W.~M., Yin, P., ``Sub-micrometer geometrically encoded fluorescent barcodes self-assembled from DNA.'' \emph{Nature Chemistry}, 4, 832--839 (2012).
+
+\item Leifer, A.~M., Fang-Yen, C., Gershow, M., Alkema, M., Samuel, A.~D.~T., ``Optogenetic manipulation of neural activity in freely moving \emph{Caenorhabditis elegans},'' \emph{Nature Methods}, 8(2), p.147–152 (2011).
+
+\item Coakley, K.~J., Simons, D.~S., Leifer, A.~M., ``Secondary Ion Mass Spectrometry Measurements of Isotopic Ratios: Correction for Time Varying Count Rate.'' \emph{International Journal of Mass Spectrometry}, 204, 107--120 (2005).
+\end{bibsection}
+
+
+\section{Books Under Contract}
+\begin{bibsection}
+\item Ross Dempsey and Andrew M.~Leifer. \textit{Undergraduate Physics for Graduate Students}. Princeton University Press. Expected 2026. 
+\end{bibsection}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Current and Past Funding}
+\section{Active or Awarded Grants}
+12/2024--12/2027 Keck Foundation (lead-PI: Leifer; co-PI: Murthy, Tank, Seung). ``Technology for measuring neural signal propagation at brain scale.'' \$1,200,000\\
+
+7/2024--7/2026, Simons Foundation,  SCGB \#3196-03 (PI Leifer; spokesperson PI is Zimmer). ``Neuromodulatory interactions the control of long-time scale behaviors.'' \$436,400\\
+
+5/2024--4/2026, Eric \& Wendy Schmidt Technology Fund, Princeton University (PIs: Leifer \& Murthy). ``New Technology for Brain-Wide Functional Connectivity Measurements at Cellular Resolution.'' \$1,100,000\\
+
+5/2024--4/2026, Ommen-Darling Bioengineering Institute, Princeton University (PIs: Leifer \& Murthy). ``Technology for measuring neural signal propagation at brain-scale'' \$140,000
+
+
+\section{Completed Grants}
+10/1/2017--9/30/2025 National Science Foundation, PHY-1734030 (PI: Bialek, co-PI: Shaevitz, named investigator: Leifer) ``Physics Frontier Center: Center for the Physics of Biological Functionj,'' \$14,700,000\\
+
+%6/2024--6/2025, Princeton Neuroscience Institute Innovation Award, Princeton University (PIs: Leifer \& Shaevitz) ``Spatiotemporal dynamics of neuropeptide signaling in the brain,''  \$200,000\\
+
+
+9/18/2019--8/31/2024  National Institute of Health, 1DP2NS116768, (PI: Leifer) ``Probing brain-wide functional connectivity during behavior.''  \$2,430,000\\\ %Andy double check the exa
+
+6/2019--5/2024 National Science Foundation, 1845137, (PI: Leifer) ``CAREER: Neural mechanisms of flexible sensorimotor processing in C. elegans,''  \$800,000 \\
+
+7/2017--7/2024, Simons Foundation, SCGB \#543003 (PI Leifer; spoksepserson PI is Zimmer) ``Neural Dynamics of a Multi-timescale Social Behavior,'' \$1,080,000\\
+
+5/15/2020--4/30/2021 National Science Foundation, PHY-2031509, (co-PI: Leifer; PI: Elmer) ``RAPID: Open Research Infrastructure for COVID-19 Ventilator Data''  \$200,000\\\ 
+
+
+%Award ID 324285
+%This work was supported by a grant from the Simons Foundation (SCGB#324285, A.L.)
+7/2014--7/2017, Simons Foundation,  SCGB  (PI: Leifer)  ``Whole brain calcium imaging in freely behaving nematodes,'' \$320,000\\
+
+
+\end{document}
+
+
+
+
